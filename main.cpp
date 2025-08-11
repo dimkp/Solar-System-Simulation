@@ -190,9 +190,9 @@ int main() {
         return 1;
     }
 
-    // Request an OpenGL 2.1 compatibility context so immediate-mode works
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 #if defined(__APPLE__)
 	// Programm not compatible with Apple OpenGL
 #endif
@@ -232,3 +232,4 @@ int main() {
 	std::cout << "Solar System Simulation finished!" << std::endl;
     return 0;
 }
+
